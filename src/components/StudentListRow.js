@@ -6,7 +6,7 @@ function StudentListRow(props) {
     const { _id, name, email, rollNo } = props.obj;
 
     const handleClick = () => {
-        Axios.delete(`http://localhost:4000/studentRoute/delete-student/${_id}`)
+        Axios.delete("https://crud-backend-deployment.onrender.com/studentRoute/delete-student/" + _id)
             .then((res) => {
                 if (res.status === 200) {
                     alert("Record deleted successfully");
